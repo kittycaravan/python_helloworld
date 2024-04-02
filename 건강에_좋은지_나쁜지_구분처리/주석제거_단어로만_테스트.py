@@ -26,7 +26,10 @@ model = tf.keras.Sequential([
 ])
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(padded_sequences, labels, epochs=10)
+
+#test word
 test_sentence = "bird"
+
 test_sequence = tokenizer.texts_to_sequences([test_sentence])
 padded_test_sequence = pad_sequences(test_sequence, maxlen=max_len, padding='post')
 prediction = model.predict(padded_test_sequence)
