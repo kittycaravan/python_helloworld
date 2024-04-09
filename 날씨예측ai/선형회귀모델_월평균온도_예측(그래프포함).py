@@ -28,10 +28,7 @@ last_year_month_temp_desc = np.array([
 
 # 두 배열 합치기
 last_year_month_temp_combined = np.concatenate((last_year_month_temp_asc, last_year_month_temp_desc), axis=0)
-
-print("Combined Array:")
-print(last_year_month_temp_combined)
-
+print("Combined Array:" , last_year_month_temp_combined)
 
 # 선형 회귀 모델 초기화
 model_asc = LinearRegression()
@@ -41,10 +38,7 @@ model_desc = LinearRegression()
 model_asc.fit(array_asc, last_year_month_temp_asc)
 model_desc.fit(array_desc, last_year_month_temp_desc)
 
-
-
-# 모델을 사용하여 특정 월의 날씨 예측
-# todo:
+## 모델을 사용하여 특정 월의 날씨 예측
 # 월 분기처리
 if(TARGET_MONTH <= 8):
     target_day = np.array([[TARGET_MONTH]]) # 예상 월 및 일 (소수점으로 일을 지정)
@@ -55,16 +49,10 @@ else:
     predicted_temperature = model_desc.predict(target_day)
     print("예상 평균 온도 (하강):", predicted_temperature[0][0])
 
-
 # 그래프 그리기
 plt.rcParams['font.family'] = 'Malgun Gothic'   #한글깨지면 이거 하면 됨. 폰트 지정. utf8문제가 아님.
-
-# plt.figure(figsize=(8, 6))
-# plt.figure(figsize=(14, 6))
 plt.figure(figsize=(13, 6)) #그래프 전체 크기 (수치들 말고 전체 화면 크기. 인치단위)
-
 plt.xticks(np.arange(1, SIZE_ASC+SIZE_DESC+1)) # 1부터 12까지의 눈금을 표시합니다.
-
 
 ## 월별 평균기온 그래프
 # 'bo-'는 그래프에서 사용하는 선의 스타일을 지정하는 것입니다. 
