@@ -27,16 +27,16 @@ model.compile(optimizer='adam',
 model.fit(train_images, train_labels, epochs=5)
 
 # 이미지 읽기
-# img = cv2.imread('0.bmp') # 여기 바꿔가면서 테스트하자. 5
+img = cv2.imread('0.bmp') # 여기 바꿔가면서 테스트하자. 5 7 오답계속
 # img = cv2.imread('1.bmp') # 여기 바꿔가면서 테스트하자. 1 정답
-img = cv2.imread('2.bmp') # 여기 바꿔가면서 테스트하자. 2 정답
-# img = cv2.imread('3.bmp') # 여기 바꿔가면서 테스트하자. 5
-# img = cv2.imread('4.bmp') # 여기 바꿔가면서 테스트하자. 9
+# img = cv2.imread('2.bmp') # 여기 바꿔가면서 테스트하자. 2 정답
+# img = cv2.imread('3.bmp') # 여기 바꿔가면서 테스트하자. 3 정답
+# img = cv2.imread('4.bmp') # 여기 바꿔가면서 테스트하자. 4 정답
 # img = cv2.imread('5.bmp') # 여기 바꿔가면서 테스트하자. 5 정답
-# img = cv2.imread('6.bmp') # 여기 바꿔가면서 테스트하자. 4
+# img = cv2.imread('6.bmp') # 여기 바꿔가면서 테스트하자. 4 5 오답계속
 # img = cv2.imread('7.bmp') # 여기 바꿔가면서 테스트하자. 7 정답
-# img = cv2.imread('8.bmp') # 여기 바꿔가면서 테스트하자. 4
-# img = cv2.imread('9.bmp') # 여기 바꿔가면서 테스트하자. 5
+# img = cv2.imread('8.bmp') # 여기 바꿔가면서 테스트하자. 8 정답
+# img = cv2.imread('9.bmp') # 여기 바꿔가면서 테스트하자. 9 정답
 
 if img is None:
     print("이미지를 읽을 수 없습니다.")
